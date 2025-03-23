@@ -57,7 +57,7 @@ class FenetrePrincipale:
     def infos_blancs(self) :
         font = pygame.font.Font(None, int(self.hauteur * 0.065)) 
         text1 = font.render("Joueur blanc", 1, self.couleur)
-        nom_fichier = os.sep.join(["images", "IconeGris.png"])
+        nom_fichier = os.sep.join(["data", "images", "IconeGris.png"])
         img = pygame.image.load(nom_fichier)
         img_width = int(self.largeur * 0.092)   
         img_height = int(self.hauteur * 0.13)  
@@ -74,7 +74,7 @@ class FenetrePrincipale:
         font = pygame.font.Font(None, int(self.hauteur * 0.065))  
         text2 = font.render("Joueur noir", 1, self.couleur)
         text2 = pygame.transform.rotate(text2, angle*180)
-        nom_fichier = os.sep.join(["images", "IconeNoir.png"])
+        nom_fichier = os.sep.join(["data", "images", "IconeNoir.png"])
         img = pygame.image.load(nom_fichier)
         img_width = int(self.largeur * 0.092)  
         img_height = int(self.hauteur * 0.13)  
@@ -92,7 +92,7 @@ class FenetrePrincipale:
     # Affichage pieces restantes blanches
     def afficher_conteur_p_b(self) :
         font = pygame.font.Font(None, int(self.hauteur * 0.098))  
-        lst = [os.sep.join(["images", "pion gris.png"]), os.sep.join(["images", "cavalier gris.png"]), os.sep.join(["images", "fou gris.png"]), os.sep.join(["images", "tour gris.png"]), os.sep.join(["images", "reine gris.png"])]
+        lst = [os.sep.join(["data", "images", "pion gris.png"]), os.sep.join(["data", "images", "cavalier gris.png"]), os.sep.join(["data", "images", "fou gris.png"]), os.sep.join(["data", "images", "tour gris.png"]), os.sep.join(["data", "images", "reine gris.png"])]
         icon_size = int(self.hauteur * 0.098) 
         for i in range(5) :
             texte = font.render(f" : {str(self.jeu.dico_b[i])}", 1, self.couleur)
@@ -112,7 +112,7 @@ class FenetrePrincipale:
     def afficher_conteur_p_n(self) :
         if self.jeu.orientation == 1 : 
             font = pygame.font.Font(None, int(self.hauteur * 0.098)) 
-            lst = [os.sep.join(["images", "reine noir.png"]), os.sep.join(["images", "tour noir.png"]), os.sep.join(["images", "fou noir.png"]), os.sep.join(["images", "cavalier noir.png"]), os.sep.join(["images", "pion noir.png"])]
+            lst = [os.sep.join(["data", "images", "reine noir.png"]), os.sep.join(["data", "images", "tour noir.png"]), os.sep.join(["data", "images", "fou noir.png"]), os.sep.join(["data", "images", "cavalier noir.png"]), os.sep.join(["data", "images", "pion noir.png"])]
             icon_size = int(self.hauteur * 0.104)  
             
             for i in range(5) :
@@ -136,7 +136,7 @@ class FenetrePrincipale:
                 self.ecran.blit(texte, (int(self.largeur * 0.75), int(self.hauteur * 0.716)))
         else :
             font = pygame.font.Font(None, int(self.hauteur * 0.098))  
-            lst = [os.sep.join(["images", "pion noir.png"]), os.sep.join(["images", "cavalier noir.png"]), os.sep.join(["images", "fou noir.png"]), os.sep.join(["images", "tour noir.png"]), os.sep.join(["images", "reine noir.png"])]
+            lst = [os.sep.join(["data", "images", "pion noir.png"]), os.sep.join(["data", "images", "cavalier noir.png"]), os.sep.join(["data", "images", "fou noir.png"]), os.sep.join(["data", "images", "tour noir.png"]), os.sep.join(["data", "images", "reine noir.png"])]
             icon_size = int(self.hauteur * 0.098)  
             for i in range(5) :
                 texte = font.render(f" : {str(self.jeu.dico_n[i])}", 1, self.couleur)
@@ -239,7 +239,7 @@ class FenetrePrincipale:
         x_blanc = int(self.largeur * 0.01)
         y_blanc = int(self.hauteur * 0.3)
         x_noir = int(self.largeur * 0.82)
-        y_noir = int(self.hauteur * 0.57)
+        y_noir = int(self.hauteur * 0.3)
         font = pygame.font.Font(None, int(self.hauteur * 0.14))
 
         if self.sans_limite :

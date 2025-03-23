@@ -137,7 +137,7 @@ def deconte(couleur, couleur_claire) :
 
 # croix d'arret du jeu
 def quitter_fenetre(fenetre, couleur = (0,0,0)) :
-    chemin_image = os.sep.join(["images", "croix.png"])
+    chemin_image = os.sep.join(["data", "images", "croix.png"])
     image = pygame.image.load(chemin_image)
     largeur_bouton, hauteur_bouton = 50, 50
     image = pygame.transform.scale(image, (largeur_bouton, hauteur_bouton))
@@ -234,10 +234,10 @@ def afficher_promotion(ecran, camp):
     
     # Définir les pièces et leurs images
     pieces = {
-        'reine': pygame.image.load(os.sep.join(["images", "reine gris.png"]) if camp else os.sep.join(["images", "reine noir.png"])),
-        'tour': pygame.image.load(os.sep.join(["images", "tour gris.png"]) if camp else os.sep.join(["images", "tour noir.png"])),
-        'fou': pygame.image.load(os.sep.join(["images", "fou gris.png"]) if camp else os.sep.join(["images", "fou noir.png"])),
-        'cavalier': pygame.image.load(os.sep.join(["images", "cavalier gris.png"]) if camp else os.sep.join(["images", "cavalier noir.png"]))
+        'reine': pygame.image.load(os.sep.join(["data", "images", "reine gris.png"]) if camp else os.sep.join(["data", "images", "reine noir.png"])),
+        'tour': pygame.image.load(os.sep.join(["data", "images", "tour gris.png"]) if camp else os.sep.join(["data", "images", "tour noir.png"])),
+        'fou': pygame.image.load(os.sep.join(["data", "images", "fou gris.png"]) if camp else os.sep.join(["data", "images", "fou noir.png"])),
+        'cavalier': pygame.image.load(os.sep.join(["data", "images", "cavalier gris.png"]) if camp else os.sep.join(["data", "images", "cavalier noir.png"]))
     }
     
     # Redimensionner images
@@ -285,8 +285,8 @@ def afficher_choix_orientation():
     pygame.display.set_caption("Choisissez l'orientation du plateau")
 
     # Chargement des images
-    chemin_image1 = os.sep.join(["images", "o1.png"])
-    chemin_image2 = os.sep.join(["images", "o2.png"])
+    chemin_image1 = os.sep.join(["data", "images", "o1.png"])
+    chemin_image2 = os.sep.join(["data", "images", "o2.png"])
     image1 = pygame.image.load(chemin_image1)
     image2 = pygame.image.load(chemin_image2)
 
@@ -457,8 +457,8 @@ class JeuEchecs:
         self.echec_blanc = False
         self.echec_noir = False
         self.surface = pygame.Surface((8 * 80, 8 * 80))  # Surface pour l'échiquier
-        self.victoire_noir = pygame.image.load(os.sep.join(["images", "NoirWin.png"]))
-        self.victoire_blanc = pygame.image.load(os.sep.join(["images", "BlancWin.png"]))
+        self.victoire_noir = pygame.image.load(os.sep.join(["data", "images", "NoirWin.png"]))
+        self.victoire_blanc = pygame.image.load(os.sep.join(["data", "images", "BlancWin.png"]))
         
 
 
@@ -576,13 +576,13 @@ class JeuEchecs:
                     choix = afficher_promotion(ecran, piece.camp) 
                     
                     if choix == 'reine':
-                        nouvelle_piece = Reine(piece.camp, os.sep.join(["images", "reine noir.png"]) if piece.camp == 0 else os.sep.join(["images", "reine gris.png"]))
+                        nouvelle_piece = Reine(piece.camp, os.sep.join(["data", "images", "reine noir.png"]) if piece.camp == 0 else os.sep.join(["data", "images", "reine gris.png"]))
                     elif choix == 'cavalier':
-                        nouvelle_piece = Cavalier(piece.camp, os.sep.join(["images", "cavalier noir.png"]) if piece.camp == 0 else os.sep.join(["images", "cavalier gris.png"]))
+                        nouvelle_piece = Cavalier(piece.camp, os.sep.join(["data", "images", "cavalier noir.png"]) if piece.camp == 0 else os.sep.join(["data", "images", "cavalier gris.png"]))
                     elif choix == 'tour':
-                        nouvelle_piece = Tour(piece.camp, os.sep.join(["images", "tour noir.png"]) if piece.camp == 0 else os.sep.join(["images", "tour gris.png"]))
+                        nouvelle_piece = Tour(piece.camp, os.sep.join(["data", "images", "tour noir.png"]) if piece.camp == 0 else os.sep.join(["data", "images", "tour gris.png"]))
                     elif choix == 'fou':
-                        nouvelle_piece = Fou(piece.camp, os.sep.join(["images", "fou noir.png"]) if piece.camp == 0 else os.sep.join(["images", "fou gris.png"]))
+                        nouvelle_piece = Fou(piece.camp, os.sep.join(["data", "images", "fou noir.png"]) if piece.camp == 0 else os.sep.join(["data", "images", "fou gris.png"]))
                     
                     self.plateau[ligne][colonne] = nouvelle_piece
 

@@ -8,7 +8,7 @@ import os
 
 class Pion :
     
-    def __init__(self, camp=0, representation=os.sep.join(["images", "pion noir.png"])):
+    def __init__(self, camp=0, representation=os.sep.join(["data", "images", "pion noir.png"])):
         self.camp = camp
         self.representation = representation
         self.type = 6
@@ -65,7 +65,7 @@ class Pion :
         return self.representation
         
 class Roi:
-    def __init__(self, camp=0, representation=os.sep.join(["images", "roi noir.png"])):
+    def __init__(self, camp=0, representation=os.sep.join(["data", "images", "roi noir.png"])):
         self.camp = camp
         self.representation = representation
         self.type = 5
@@ -157,7 +157,7 @@ class Roi:
         
 class Cavalier :
     
-    def __init__(self, camp=0, representation = os.sep.join(["images", "cavalier noir.png"])):
+    def __init__(self, camp=0, representation = os.sep.join(["data", "images", "cavalier noir.png"])):
         self.camp = camp
         self.representation = representation
         self.type = 3
@@ -198,7 +198,7 @@ class Cavalier :
     
 class Fou :
     
-    def __init__(self, camp=0, representation = os.sep.join(["images", "fou noir.png"])):
+    def __init__(self, camp=0, representation = os.sep.join(["data", "images", "fou noir.png"])):
         self.camp = camp
         self.representation = representation
         self.type = 2
@@ -235,7 +235,7 @@ class Fou :
         
 class Tour :
     
-    def __init__(self, camp=0, representation = os.sep.join(["images", "tour noir.png"])):
+    def __init__(self, camp=0, representation = os.sep.join(["data", "images", "tour noir.png"])):
             self.camp = camp
             self.representation = representation
             self.type = 4
@@ -273,7 +273,7 @@ class Tour :
     
 class Reine() :
 
-    def __init__(self, camp=0, representation=os.sep.join(["images", "reine noir.png"])):
+    def __init__(self, camp=0, representation=os.sep.join(["data", "images", "reine noir.png"])):
         self.camp = camp
         self.representation = representation
         self.type = 1
@@ -536,22 +536,22 @@ cavalier_noir_2 = Cavalier()
 fou_noir_1 = Fou()
 fou_noir_2 = Fou()
 
-pion_blanc_1 = Pion(1, os.sep.join(["images", "pion gris.png"]))
-pion_blanc_2 = Pion(1, os.sep.join(["images", "pion gris.png"]))
-pion_blanc_3 = Pion(1, os.sep.join(["images", "pion gris.png"]))
-pion_blanc_4 = Pion(1, os.sep.join(["images", "pion gris.png"]))
-pion_blanc_5 = Pion(1, os.sep.join(["images", "pion gris.png"]))
-pion_blanc_6 = Pion(1, os.sep.join(["images", "pion gris.png"]))
-pion_blanc_7 = Pion(1, os.sep.join(["images", "pion gris.png"]))
-pion_blanc_8 = Pion(1, os.sep.join(["images", "pion gris.png"]))
-roi_blanc = Roi(1, os.sep.join(["images", "roi gris.png"]))
-reine_blanc = Reine(1, os.sep.join(["images", "reine gris.png"]))
-tour_blanc_1 = Tour(1, os.sep.join(["images", "tour gris.png"]))
-tour_blanc_2 = Tour(1, os.sep.join(["images", "tour gris.png"]))
-cavalier_blanc_1 = Cavalier(1, os.sep.join(["images", "cavalier gris.png"]))
-cavalier_blanc_2 = Cavalier(1, os.sep.join(["images", "cavalier gris.png"]))
-fou_blanc_1 = Fou(1, os.sep.join(["images", "fou gris.png"]))
-fou_blanc_2 = Fou(1, os.sep.join(["images", "fou gris.png"]))
+pion_blanc_1 = Pion(1, os.sep.join(["data", "images", "pion gris.png"]))
+pion_blanc_2 = Pion(1, os.sep.join(["data", "images", "pion gris.png"]))
+pion_blanc_3 = Pion(1, os.sep.join(["data", "images", "pion gris.png"]))
+pion_blanc_4 = Pion(1, os.sep.join(["data", "images", "pion gris.png"]))
+pion_blanc_5 = Pion(1, os.sep.join(["data", "images", "pion gris.png"]))
+pion_blanc_6 = Pion(1, os.sep.join(["data", "images", "pion gris.png"]))
+pion_blanc_7 = Pion(1, os.sep.join(["data", "images", "pion gris.png"]))
+pion_blanc_8 = Pion(1, os.sep.join(["data", "images", "pion gris.png"]))
+roi_blanc = Roi(1, os.sep.join(["data", "images", "roi gris.png"]))
+reine_blanc = Reine(1, os.sep.join(["data", "images", "reine gris.png"]))
+tour_blanc_1 = Tour(1, os.sep.join(["data", "images", "tour gris.png"]))
+tour_blanc_2 = Tour(1, os.sep.join(["data", "images", "tour gris.png"]))
+cavalier_blanc_1 = Cavalier(1, os.sep.join(["data", "images", "cavalier gris.png"]))
+cavalier_blanc_2 = Cavalier(1, os.sep.join(["data", "images", "cavalier gris.png"]))
+fou_blanc_1 = Fou(1, os.sep.join(["data", "images", "fou gris.png"]))
+fou_blanc_2 = Fou(1, os.sep.join(["data", "images", "fou gris.png"]))
 
 Lst_position = [
     [tour_noir_1, cavalier_noir_1, fou_noir_1, reine_noir, roi_noir, fou_noir_2, cavalier_noir_2, tour_noir_2],

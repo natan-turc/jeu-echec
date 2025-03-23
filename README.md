@@ -51,7 +51,7 @@ Ce projet est une implémentation complète du jeu d'échecs en Python utilisant
 
 ```
 jeu-echec/
-├── images/            # Images des pièces et éléments graphiques
+├── data/            # Images des pièces et éléments graphiques
 ├── src/
 │   ├── interface1.py  # Affichage du plateau et fenêtres de sélection
 │   ├── Jeu_echec1.py  # Logique du jeu et règles des échecs

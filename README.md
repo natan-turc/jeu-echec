@@ -25,7 +25,7 @@ Ce projet est une implémentation complète du jeu d'échecs en Python utilisant
 
 1. Clonez ce dépôt :
    ```
-   git clone https://github.com/votre-pseudo/jeu-echec.git
+   git clone https://github.com/natan-turc/jeu-echec.git
    ```
 2. Installez les dépendances requises :
    ```
@@ -51,7 +51,11 @@ Ce projet est une implémentation complète du jeu d'échecs en Python utilisant
 
 ```
 jeu-echec/
-├── images/            # Images des pièces et éléments graphiques
+├── data/
+│   ├── images/            # Images des pièces et éléments graphiques
+├── docs/
+│   ├── chess-documentation.md   # documentation du projet
+│   ├── chess-user-manual.md     # manuel utilisateur
 ├── src/
 │   ├── interface1.py  # Affichage du plateau et fenêtres de sélection
 │   ├── Jeu_echec1.py  # Logique du jeu et règles des échecs
@@ -59,6 +63,7 @@ jeu-echec/
 ├── .gitignore         # Fichiers ignorés par Git
 ├── LICENSE.md         # Licence du projet
 ├── README.md          # Ce fichier
+├── presentation.pdf   # présentation du projet
 └── requirements.txt   # Dépendances du projet
 ```
 
